@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap');
 
-:root{
+:root {
     --light-green: hsl(148, 38%, 91%);
     --green: hsl(169, 82%, 27%);
     --red: hsl(0, 66%, 54%);
@@ -9,8 +9,51 @@
     --dark-grey: hsl(187, 24%, 22%);
 }
 
-body{
+body {
     background-color: var(--light-green);
     max-height: 100vh;
     font-family: "Karla", sans-serif;
+}
+
+#root{
+    width: 100%;
+}
+
+main {
+    background: #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: block;
+    max-width: 520px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--dark-grey);
+    margin-bottom: 2em;
+}
+
+h2{
+    text-align: left;
+}
+
+.names-bloc, .radio-bloc{
+    display: flex;
+    justify-content: space-between;
+}
+
+.names-bloc input {
+    width: 220px;
+}
+
+input#email {
+    width: -webkit-fill-available;
+}
+
+.radio-bloc div {
+    border: 1px solid var(--dark-grey);
+    width: 220px;
 }
