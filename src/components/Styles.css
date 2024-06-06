@@ -51,6 +51,11 @@ input:focus, input:active, input:hover, textarea {
     cursor: pointer;
 }
 
+legend, label {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
 h2{
     text-align: left;
 }
@@ -82,6 +87,11 @@ input#email {
 
 .radio-bloc input, .consent-bloc input{
     accent-color: var(--green);
+}
+
+fieldset {
+    border: none;
+    display: contents;
 }
 
 .message-bloc {

@@ -23,8 +23,8 @@ return (
                 <label htmlFor="email" className="">Email</label><br />
                 <input type="email" id="email" name="email" className="" />
             </div>
-            <div>
-                <p className="">Query Type</p>
+            <fieldset>
+                <legend className="">Query Type</legend>
                 <div className="radio-bloc">
                     <div>
                         <input type="radio" id="general" name="queryType" value="General Enquiry" />
@@ -35,10 +35,10 @@ return (
                         <label htmlFor="support">Support Request</label>
                     </div>
                 </div>
-            </div>
+            </fieldset>
             <div className="message-bloc">
                 <label htmlFor="message" className="">Message</label><br />
-                <textarea id="message" name="message" rows="5"></textarea>
+                <textarea id="message" name="message" rows="5" ></textarea>
             </div>
             <div className="consent-bloc">
                 <input type="checkbox" id="consent" name="consent" value="Accept Consent" />
