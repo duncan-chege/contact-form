@@ -65,7 +65,7 @@ export default function ContactForm(){
 
     return (
     <main role="main">
-        { valid && <div className="success-message">
+        { valid && <div className="success-message" role="alert">
             <h5><i className="bi bi-check-circle"></i> Message Sent!</h5>
             <p>Thanks for completing the form. We'll be in touch soon!</p>
         </div> }
@@ -82,8 +82,9 @@ export default function ContactForm(){
                             value={values.firstName}
                             onChange={handleInputChange}
                             className={submitted && !values.firstName ? "invalid-entry" : ""}
+                            aria-required="true"
                         />
-                        {submitted && !values.firstName && <span className="error">This field is required</span>}
+                        {submitted && !values.firstName && <span className="error" role="alert">This field is required</span>}
                     </div>
                     <div>
                         <label htmlFor="lname" className="">Last Name <i className="bi bi-asterisk"></i></label><br />
@@ -94,8 +95,9 @@ export default function ContactForm(){
                             value={values.lastName}
                             onChange={handleInputChange}
                             className={submitted && !values.lastName ? "invalid-entry" : ""}
+                            aria-required="true"
                         />
-                        {submitted && !values.lastName && <span className="error">This field is required</span>}
+                        {submitted && !values.lastName && <span className="error" role="alert">This field is required</span>}
                     </div>
                 </div>
                 <div className="email-bloc">
@@ -107,8 +109,9 @@ export default function ContactForm(){
                         value={values.email}
                         onChange={handleEmailChange}
                         className={submitted && (!values.email || emailError) ? "invalid-entry" : ""}
+                        aria-required="true"
                     />
-                    {submitted && (!values.email || emailError) && <span className="error">Please enter a valid email address</span>}
+                    {submitted && (!values.email || emailError) && <span className="error" role="alert">Please enter a valid email address</span>}
                 </div>
                 <fieldset>
                     <legend className="">Query Type <i className="bi bi-asterisk"></i></legend>
@@ -121,6 +124,7 @@ export default function ContactForm(){
                                 value="general"
                                 checked={values.query === "general"}
                                 onChange={handleInputChange}
+                                aria-required="true"
                             />
                             <label htmlFor="general">General Enquiry</label>
                         </div>
@@ -132,10 +136,11 @@ export default function ContactForm(){
                                 value="support"
                                 checked={values.query === "support"}
                                 onChange={handleInputChange}
+                                aria-required="true"
                             />
                             <label htmlFor="support">Support Request</label>
                         </div>
-                        {submitted && !values.query && <span className="error">Please select a query type</span>}
+                        {submitted && !values.query && <span className="error" role="alert">Please select a query type</span>}
                     </div>
                 </fieldset>
                 <div className="message-bloc">
@@ -147,9 +152,10 @@ export default function ContactForm(){
                         value={values.message}
                         onChange={handleInputChange}
                         className={submitted && !values.message ? "invalid-entry" : ""}
+                        aria-required="true"
                     >
                     </textarea>
-                    {submitted && !values.message && <span className="error">This field is required</span>}
+                    {submitted && !values.message && <span className="error" role="alert">This field is required</span>}
                 </div>
                 <div className="consent-bloc">
                     <input 
@@ -158,9 +164,10 @@ export default function ContactForm(){
                         name="consent"
                         checked={values.consent}
                         onChange={handleInputChange}
+                        aria-required="true"
                     />
                     <label htmlFor="consent">I consent to being contacted by the team</label>
-                    {submitted && !values.consent && <span className="error">To submit this form, please consent to being contacted</span>}
+                    {submitted && !values.consent && <span className="error" role="alert">To submit this form, please consent to being contacted</span>}
                 </div>
                 <button type="submit">Submit</button>
             </form>
