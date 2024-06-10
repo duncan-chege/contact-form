@@ -21,10 +21,17 @@ body {
 
 p {
     margin: 0 0 10px 0;
+    font-size: 14px;
 }
 
 main {
-   margin: 0 1em;
+    margin: 0 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    row-gap: 1em;
 }
 
 .form-bloc{
@@ -32,23 +39,34 @@ main {
     border-radius: 10px;
     padding: 0.1rem 2rem;
     max-width: 520px;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
 }
 
-input, .radio-bloc div {
+i.bi.bi-asterisk {
+    font-size: 5.5px;
+    position: relative;
+    left: 2px;
+    bottom: 7px;
+    color: var(--green);
+}
+
+.names-bloc, .email-bloc, .message-bloc, .radio-bloc {
+    margin-bottom: 1em;
+}
+
+input, .radio-bloc div, textarea {
     padding: 10px 15px;
     border-radius: 5px;
     outline: none;
     border: 1px solid var(--dark-grey);
-    margin-bottom: 1.5em;
+}
+
+.invalid-entry{
+    border: 1px solid var(--red);
 }
 
 input:focus, input:active, input:hover, textarea {
     border-color: var(--green);
-    cursor: pointer;
 }
 
 legend, label {
@@ -62,7 +80,7 @@ h2{
 
 .names-bloc, .radio-bloc {
     display: flex;
-    gap: 10px;
+    column-gap: 10px;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -94,21 +112,17 @@ fieldset {
     display: contents;
 }
 
-.message-bloc {
-    margin: 0 0 1.5em 0;
-}
-
 textarea {
     width: -webkit-fill-available;
-    border-radius: 5px;
 }
 
 .consent-bloc input{
     margin: 0;
 }
 
-.consent-bloc label{
+.consent-bloc label {
     margin-left: 1em;
+    margin-bottom: 0;
 }
 
 button {
@@ -127,4 +141,32 @@ button {
 
 button:hover {
     background-color: var(--dark-grey);
+}
+
+.success-message {
+    width: 400px;
+    text-align: left;
+    background: var(--dark-grey);
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 20px 20px 10px 20px;
+    border-radius: 10px;
+}
+
+h5 {
+    font-size: 1em;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+i.bi.bi-check-circle {
+    padding-right: 5px;
+}
+
+span.error {
+    display: block;
+    color: var(--red);
+    font-size: 12px;
+    margin-top: 5px;
 }
