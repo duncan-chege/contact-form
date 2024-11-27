@@ -25,4 +25,4 @@ View the project > [here](https://duncan-chege.github.io/contact-form)
 
 ## Acknowledgements
 
-Thank you Frontend Mentor for the project. View the full project scope > [here](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj)
+Thank you Frontend Mentor for the project. View the full project scope > [here](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj) 
