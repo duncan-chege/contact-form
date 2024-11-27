@@ -23,6 +23,6 @@ Enter your details in the form fields. If your details are wrong or if the field
 View the project > [here](https://duncan-chege.github.io/contact-form)
 
 
-## Acknowledgements
+## Acknowledgements 
 
 Thank you Frontend Mentor for the project. View the full project scope > [here](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj) 
